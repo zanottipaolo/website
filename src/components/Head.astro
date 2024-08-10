@@ -91,7 +91,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
     });
 
     window
-      .matchMedia("(prefers-color-scheme: dark)")
+      .matchMedia("(prefers-color-scheme: system)")
       .addEventListener("change", (event) => {
         if (localStorage.theme === "system") {
           toggleTheme(event.matches);

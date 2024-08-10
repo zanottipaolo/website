@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import PageFind from "@components/PageFind.astro";
 import { SITE } from "@consts";
+import BackToTop from "@components/BackToTop.astro";
 
 type Props = {
   title: string;
@@ -25,5 +26,8 @@ const { title, description } = Astro.props;
     </main>
     <Footer />
     <PageFind />
+    <div class="fixed bottom-5 right-5">
+      <BackToTop />
+    </div>
   </body>
 </html>
