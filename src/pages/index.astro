@@ -25,8 +25,16 @@ const projects: CollectionEntry<"projects">[] = (
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
+      <img
+        src="/profile_1.jpeg"
+        class="mb-3 h-28 w-28 rounded-full object-cover"
+        alt="It's me!"
+      />
       <h1 class="animate text-2xl font-semibold text-black dark:text-white">
-        Hi there, I'm Paolo Zanotti 👋🏻
+        <span class="flex gap-3">
+          Hi there, I'm Paolo Zanotti
+          <img src="/Hi_long.gif" class="h-7 w-7" alt="hand animation" />
+        </span>
       </h1>
       <div class="space-y-16">
         <!-- hero -->
@@ -144,14 +152,12 @@ const projects: CollectionEntry<"projects">[] = (
             <div class="mt-4 flex justify-center gap-4">
               <button
                 id="btn-1"
-                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 bg-gray-400 p-2 text-xs text-black/35 transition-colors duration-300 hover:bg-gray-400 dark:border-white dark:bg-white dark:text-black dark:hover:bg-white"
-                >1</button
-              >
+                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 bg-gray-400 text-xs text-black/35 transition-colors duration-300 hover:bg-gray-400 dark:border-white dark:bg-white dark:text-black dark:hover:bg-white"
+              ></button>
               <button
                 id="btn-2"
-                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 p-2 text-xs text-black/35 transition-colors duration-300 hover:bg-gray-400 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
-                >2</button
-              >
+                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 text-xs text-black/35 transition-colors duration-300 hover:bg-gray-400 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+              ></button>
             </div>
           </div>
         </section>
@@ -194,56 +200,5 @@ const projects: CollectionEntry<"projects">[] = (
         </section>
       </div>
     </aside>
-
-    <!-- Slider -->
-    <script>
-      const button1 = document.getElementById("btn-1");
-      const button2 = document.getElementById("btn-2");
-
-      const testimonial1 = document.getElementById("testimonial-1");
-      const testimonial2 = document.getElementById("testimonial-2");
-
-      button1?.addEventListener("click", function () {
-        testimonial2?.classList.add("hidden");
-        testimonial2?.classList.remove("block");
-
-        testimonial1?.classList.add("block");
-        testimonial1?.classList.remove("hidden");
-
-        button1?.classList.add(
-          "bg-gray-400",
-          "dark:bg-white",
-          "dark:text-black",
-        );
-        button1?.classList.remove("dark:text-white");
-        button2?.classList.remove(
-          "bg-gray-400",
-          "dark:bg-white",
-          "dark:text-black",
-        );
-        button2?.classList.add("dark:text-white");
-      });
-
-      button2?.addEventListener("click", function () {
-        testimonial1?.classList.add("hidden");
-        testimonial1?.classList.remove("block");
-
-        testimonial2?.classList.add("block");
-        testimonial2?.classList.remove("hidden");
-
-        button1?.classList.remove(
-          "bg-gray-400",
-          "dark:bg-white",
-          "dark:text-black",
-        );
-        button1?.classList.add("dark:text-white", "dark:hover:text-black");
-        button2?.classList.remove("dark:text-white");
-        button2?.classList.add(
-          "bg-gray-400",
-          "dark:bg-white",
-          "dark:text-black",
-        );
-      });
-    </script>
   </Container>
 </Layout>
