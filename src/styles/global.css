@@ -31,7 +31,7 @@ header {
 }
 
 main {
-  @apply flex-1 pt-32 pb-20;
+  @apply flex-1 pb-20 pt-32;
 }
 
 footer {
@@ -117,4 +117,16 @@ pre {
 
 .copy-code:active {
   @apply scale-90 transition-transform;
+}
+
+#light-theme-button {
+  display: none;
+}
+
+.dark #dark-theme-button {
+  display: none;
+}
+
+.dark #light-theme-button {
+  display: flex;
 }
