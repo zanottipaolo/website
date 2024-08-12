@@ -8,8 +8,18 @@ import { SITE } from "@consts";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/" underline={false}>
-        <div class="text-xl font-semibold">
-          {SITE.TITLE} 👨🏻‍💻
+        <div class="flex items-center gap-4">
+          <img
+            src="/profile_1.jpeg"
+            class="h-12
+            w-12
+            rounded-full
+            object-cover"
+            alt="It's me!"
+          />
+          <div class="text-xl font-semibold">
+            {SITE.TITLE}
+          </div>
         </div>
       </Link>
       <nav class="flex flex-wrap items-center gap-4 text-sm">
