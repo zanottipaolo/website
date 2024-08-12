@@ -5,8 +5,8 @@ export const SITE: Site = {
   DESCRIPTION:
     "Hello World! My name is Paolo Zanotti and I'm a Software Engineer. This is my portfolio, check out my projects and if you are interested get in touch with me.",
   EMAIL: "hello@paolozanotti.dev",
-  NUM_POSTS_ON_HOMEPAGE: 5,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NUM_POSTS_ON_HOMEPAGE: 3,
+  NUM_PROJECTS_ON_HOMEPAGE: 2,
 };
 
 export const HOME: Metadata = {
