@@ -6,6 +6,7 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import ArrowCardProject from "@components/ArrowCardProject.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -72,11 +73,11 @@ const projects: CollectionEntry<"projects">[] = (
             </h2>
             <Link href="/projects"> See all projects </Link>
           </div>
-          <ul class="not-prose flex flex-col gap-4">
+          <ul class="not-prose grid grid-cols-1 gap-4 sm:grid-cols-2">
             {
               projects.map((project) => (
-                <li>
-                  <ArrowCard entry={project} />
+                <li class="flex">
+                  <ArrowCardProject entry={project} />
                 </li>
               ))
             }
@@ -89,7 +90,7 @@ const projects: CollectionEntry<"projects">[] = (
           </h2>
           <article>
             <p>
-              If you want to get in touch with me to talk about a project, write
+              If you want to get in touch to talk about a project, write
               me an email at <Link
                 href={`mailto:${SITE.EMAIL}`}
                 aria-label={`Email ${SITE.TITLE}`}

@@ -1,11 +1,9 @@
 ---
-title: "Studio Zanotti"
-description: "I was commissioned by Studio Tecnico Associato Zanotti to
-  create their company website. It's a WordPress project with
-  the purpose of showing their services and works to clients."
-date: "2020"
-demoURL: "https://studiotecnicozanotti.it/"
-imgURL: "/projects/sta-zanotti.jpeg"
+title: "Jira Clone"
+description: "Web app for project management that using agile Scrum methodology. Developed for Database 1 and Web exam with two other colleagues."
+date: "2022"
+demoURL: "https://github.com/zanottipaolo/DB1-Agile"
+imgURL: "/projects/jiraclone.jpg"
 ---
 
 ![Astro Micro](/astro-micro.jpg)

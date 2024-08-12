@@ -1,9 +1,9 @@
 ---
-title: "Astro Nano"
-description: "Minimal portfolio and blog build with astro and no frameworks."
-date: "2024-03-26"
-demoURL: "https://astro-nano-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-nano"
+title: "Ex Allievi Esperia"
+description: "As a member of the 'Ex Allievi dell'I.T.I.S. P. Paleocapa', I proposed to redo the association's website. Made with NextJS + Tailwind."
+date: "2023"
+demoURL: "https://exallievi.itispaleocapa.it"
+imgURL: "/projects/ex-allievi.jpeg"
 ---
 
 ![Astro Nano](/astro-nano.png)

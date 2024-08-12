@@ -1,11 +1,9 @@
 ---
-title: "Studio Zanotti"
-description: "I was commissioned by Studio Tecnico Associato Zanotti to
-  create their company website. It's a WordPress project with
-  the purpose of showing their services and works to clients."
-date: "2020"
-demoURL: "https://studiotecnicozanotti.it/"
-imgURL: "/projects/sta-zanotti.jpeg"
+title: "Financial report"
+description: "Web app that creates corporate financial report. Developed for Economics and Business Organization exam @ UniBg."
+date: "2023"
+demoURL: "https://financialreport.netlify.app"
+imgURL: "/projects/financial.png"
 ---
 
 ![Astro Micro](/astro-micro.jpg)

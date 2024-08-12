@@ -1,9 +1,11 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
-date: "03/18/2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+title: "Taylearn"
+description: "Virtual language assistant that helps you learn languages in
+  a completely innovative way. Landing page developed with
+  AstroJS, frontend with React and API with Fastify."
+date: "2024"
+demoURL: "https://taylearn-landing.pages.dev/"
+imgURL: "/projects/taylearn.png"
 ---
 
 ![Astro Sphere](/astro-sphere.jpg)
