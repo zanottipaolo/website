@@ -4,6 +4,7 @@ description: "Web app for project management that using agile Scrum methodology.
 date: "2022"
 demoURL: "https://github.com/zanottipaolo/DB1-Agile"
 imgURL: "/projects/jiraclone.jpg"
+repoURL: ""
 ---
 
 ![Astro Micro](/astro-micro.jpg)

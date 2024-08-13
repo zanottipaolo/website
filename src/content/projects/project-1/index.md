@@ -6,6 +6,7 @@ description: "Virtual language assistant that helps you learn languages in
 date: "2024"
 demoURL: "https://taylearn-landing.pages.dev/"
 imgURL: "/projects/taylearn.png"
+repoURL: ""
 ---
 
 ![Astro Sphere](/astro-sphere.jpg)

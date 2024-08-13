@@ -4,6 +4,7 @@ description: "As a member of the 'Ex Allievi dell'I.T.I.S. P. Paleocapa', I prop
 date: "2023"
 demoURL: "https://exallievi.itispaleocapa.it"
 imgURL: "/projects/ex-allievi.jpeg"
+repoURL: ""
 ---
 
 ![Astro Nano](/astro-nano.png)

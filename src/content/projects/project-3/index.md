@@ -6,6 +6,7 @@ description: "I was commissioned by Studio Tecnico Associato Zanotti to
 date: "2020"
 demoURL: "https://studiotecnicozanotti.it/"
 imgURL: "/projects/sta-zanotti.jpeg"
+repoURL: ""
 ---
 
 ![Astro Micro](/astro-micro.jpg)

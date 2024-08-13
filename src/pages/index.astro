@@ -25,11 +25,6 @@ const projects: CollectionEntry<"projects">[] = (
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
-      <!-- <img
-        src="/profile_1.jpeg"
-        class="mb-3 h-28 w-28 rounded-full object-cover"
-        alt="It's me!"
-      /> -->
       <h1 class="animate text-2xl font-semibold text-black dark:text-white">
         <span class="flex gap-3">
           Hi there, I'm Paolo Zanotti
@@ -174,7 +169,7 @@ const projects: CollectionEntry<"projects">[] = (
             {
               blog.map((post) => (
                 <li>
-                  <ArrowCard entry={post} />
+                  <ArrowCard entry={post} showYear={true} />
                 </li>
               ))
             }

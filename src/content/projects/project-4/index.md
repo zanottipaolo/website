@@ -4,6 +4,7 @@ description: "Web app that creates corporate financial report. Developed for Eco
 date: "2023"
 demoURL: "https://financialreport.netlify.app"
 imgURL: "/projects/financial.png"
+repoURL: ""
 ---
 
 ![Astro Micro](/astro-micro.jpg)
