@@ -1,9 +1,264 @@
 ---
 import Container from "@components/Container.astro";
-import { SITE, HOME, SOCIALS } from "@consts";
+import { ABOUT } from "@consts";
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
-  <Container>ABOUT</Container>
+<Layout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="space-y-16">
+        <section class="animate space-y-10" id="experience">
+          <div class="text-xl font-semibold text-black dark:text-white">
+            Experience 👷🏻‍♂️
+          </div>
+          <div class="">
+            <!-- Freelance -->
+            <div class="relative flex pb-12">
+              <div
+                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+              >
+                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                </div>
+              </div>
+
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">Freelance Software Engineer</h2>
+                <p class="mb-2 text-sm">2020 ÷ present | Freelance</p>
+                <ul class="list-disc pl-4">
+                  <li>
+                    Development and maintenance of websites, CMS and Web-Apps
+                  </li>
+                  <li>Development and maintenance of mobile apps</li>
+                  <li>Development and maintenance of desktop apps</li>
+                  <li>IT consulting</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ReactBricks -->
+            <div class="relative flex pb-12">
+              <div
+                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+              >
+                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                </div>
+              </div>
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Web Developer <a
+                    href="https://reactbricks.com"
+                    target="_blank"
+                    rel="noopener noreferrer">@ ReactBricks</a
+                  >
+                </h2>
+                <p class="mb-2 text-sm">
+                  November 2022 ÷ present | Bergamo, Italy
+                </p>
+                <ul class="list-disc pl-4">
+                  <li>
+                    Web-app development using React, Tailwind, Node.js and
+                    Django
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- JAC -->
+            <div class="relative flex pb-12">
+              <div
+                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+              >
+                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                </div>
+              </div>
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Computer Science Teacher <a
+                    href="https://jac-its.it"
+                    target="_blank"
+                    rel="noopener noreferrer">@ JobsAcademy</a
+                  >
+                </h2>
+                <p class="mb-2 text-sm">
+                  March 2023 ÷ October 2023 | Bergamo, Italy
+                </p>
+                <ul class="list-disc pl-4">
+                  <li>Teaching web programming using React</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Officine Digitali Italiane -->
+            <div class="relative flex">
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Web Developer <a
+                    href="https://officinedigitaliitaliane.it"
+                    target="_blank"
+                    rel="noopener noreferrer">@ Officine Digitali Italiane</a
+                  >
+                </h2>
+                <p class="mb-2 text-sm">
+                  December 2020 ÷ July 2022 | Bergamo, Italy
+                </p>
+                <ul class="list-disc pl-4">
+                  <li>
+                    Development and maintenance of websites via Wordpress and
+                    Shopify
+                  </li>
+                  <li>
+                    Custom project development via HTML, CSS and JS (with JQuery
+                    and Bootstrap)
+                  </li>
+                  <li>Web-App development using Angular</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="animate space-y-10" id="education">
+          <div class="text-xl font-semibold text-black dark:text-white">
+            Education 📚
+          </div>
+          <div class="">
+            <!-- BSc UniBg -->
+            <div class="relative flex pb-12">
+              <div
+                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+              >
+                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                </div>
+              </div>
+
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Computer Engineering <a
+                    href="https://www.unibg.it"
+                    target="_blank"
+                    rel="noopener noreferrer">@ University of Bergamo</a
+                  >
+                </h2>
+                <p class="mb-2 text-sm">Bs.C: present | Bergamo, Italy</p>
+                <p>Thesis: In progress...✏️</p>
+              </div>
+            </div>
+
+            <!-- Esperia -->
+            <div class="relative flex">
+              <div
+                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Computer Science <a
+                    href="https://www.itispaleocapa.edu.it"
+                    target="_blank"
+                    rel="noopener noreferrer">@ I.T.I.S. P. Paleocapa</a
+                  >
+                </h2>
+                <p class="mb-2 text-sm">High School | Bergamo, Italy</p>
+                <p>
+                  Final project: Real estate Archive 🏠
+                  <br />
+                  A web platform concept to merge together all of a real estate's
+                  data, reducing bureaucracy and making the job easier for technicians.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </aside>
+  </Container>
 </Layout>

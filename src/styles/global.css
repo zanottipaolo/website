@@ -34,6 +34,12 @@ main {
   @apply flex-1 pb-20 pt-32;
 }
 
+@media screen and (max-width: 454px) {
+  main {
+    @apply flex-1 pb-20 pt-36;
+  }
+}
+
 footer {
   @apply py-6 text-sm;
 }
