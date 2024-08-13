@@ -3,6 +3,7 @@ import Chips from "@components/Chips.astro";
 import Container from "@components/Container.astro";
 import { ABOUT } from "@consts";
 import Layout from "@layouts/Layout.astro";
+import Link from "@components/Link.astro";
 ---
 
 <Layout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
@@ -10,7 +11,7 @@ import Layout from "@layouts/Layout.astro";
     <aside data-pagefind-ignore>
       <div class="space-y-16">
         <!-- Experience -->
-        <section class="animate space-y-10" id="experience">
+        <section class="animate space-y-6" id="experience">
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Experience 👷🏻‍♂️
           </h2>
@@ -18,25 +19,24 @@ import Layout from "@layouts/Layout.astro";
             <!-- Freelance -->
             <div class="relative flex pb-12">
               <div
-                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+                class="absolute inset-0 flex h-full w-14 items-center justify-center"
               >
-                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                <div class="pointer-events-none h-full w-1 bg-neutral-200">
                 </div>
               </div>
 
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
                 <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
+                  class="h-12 w-12 object-contain p-2"
                 >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="hsl(var(--pc))"></path>
                 </svg>
               </div>
 
@@ -57,32 +57,23 @@ import Layout from "@layouts/Layout.astro";
             <!-- ReactBricks -->
             <div class="relative flex pb-12">
               <div
-                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+                class="absolute inset-0 flex h-full w-14 items-center justify-center"
               >
-                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                <div class="pointer-events-none h-full w-1 bg-neutral-200">
                 </div>
               </div>
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
+                <img src="/logo/rb.svg" class="h-12 w-12 object-contain p-2" />
               </div>
               <div class="flex-grow pl-4">
                 <h2 class="font-bold">
-                  Web Developer <a
+                  Web Developer @ <Link
                     href="https://reactbricks.com"
-                    target="_blank"
-                    rel="noopener noreferrer">@ ReactBricks</a
+                    external
+                    underline={false}
+                    rel="noopener noreferrer">ReactBricks</Link
                   >
                 </h2>
                 <p class="mb-2 text-sm">
@@ -100,32 +91,28 @@ import Layout from "@layouts/Layout.astro";
             <!-- JAC -->
             <div class="relative flex pb-12">
               <div
-                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+                class="absolute inset-0 flex h-full w-14 items-center justify-center"
               >
-                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                <div class="pointer-events-none h-full w-1 bg-neutral-200">
                 </div>
               </div>
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
+                <img
+                  src="/logo/jac.png"
+                  class="h-12 w-12 rounded-full object-contain object-top p-1"
+                />
               </div>
               <div class="flex-grow pl-4">
                 <h2 class="font-bold">
-                  Computer Science Teacher <a
+                  Computer Science Teacher @ <Link
                     href="https://jac-its.it"
-                    target="_blank"
-                    rel="noopener noreferrer">@ JobsAcademy</a
+                    external
+                    underline={false}
+                    rel="noopener noreferrer"
+                  >
+                    JobsAcademy</Link
                   >
                 </h2>
                 <p class="mb-2 text-sm">
@@ -140,26 +127,17 @@ import Layout from "@layouts/Layout.astro";
             <!-- Officine Digitali Italiane -->
             <div class="relative flex">
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
+                <img src="/logo/odi.svg" class="h-12 w-12 object-contain p-2" />
               </div>
               <div class="flex-grow pl-4">
                 <h2 class="font-bold">
-                  Web Developer <a
+                  Web Developer @ <Link
                     href="https://officinedigitaliitaliane.it"
-                    target="_blank"
-                    rel="noopener noreferrer">@ Officine Digitali Italiane</a
+                    external
+                    underline={false}
+                    rel="noopener noreferrer">Officine Digitali Italiane</Link
                   >
                 </h2>
                 <p class="mb-2 text-sm">
@@ -182,7 +160,7 @@ import Layout from "@layouts/Layout.astro";
         </section>
 
         <!-- Education -->
-        <section class="animate space-y-10" id="education">
+        <section class="animate space-y-6" id="education">
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Education 📚
           </h2>
@@ -190,34 +168,28 @@ import Layout from "@layouts/Layout.astro";
             <!-- BSc UniBg -->
             <div class="relative flex pb-12">
               <div
-                class="absolute inset-0 flex h-full w-10 items-center justify-center"
+                class="absolute inset-0 flex h-full w-14 items-center justify-center"
               >
-                <div class="pointer-events-none h-full w-1 bg-neutral-500">
+                <div class="pointer-events-none h-full w-1 bg-neutral-200">
                 </div>
               </div>
 
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
+                <img
+                  src="/logo/unibg.png"
+                  class="h-12 w-12 rounded-full object-contain p-1"
+                />
               </div>
 
               <div class="flex-grow pl-4">
                 <h2 class="font-bold">
-                  Computer Engineering <a
+                  Computer Engineering @ <Link
                     href="https://www.unibg.it"
-                    target="_blank"
-                    rel="noopener noreferrer">@ University of Bergamo</a
+                    external
+                    underline={false}
+                    rel="noopener noreferrer">University of Bergamo</Link
                   >
                 </h2>
                 <p class="mb-2 text-sm">Bs.C: present | Bergamo, Italy</p>
@@ -228,26 +200,20 @@ import Layout from "@layouts/Layout.astro";
             <!-- Esperia -->
             <div class="relative flex">
               <div
-                class="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-black bg-neutral-500 text-white dark:border-white"
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
               >
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
+                <img
+                  src="/logo/esperia.png"
+                  class="h-12 w-12 object-contain p-1"
+                />
               </div>
               <div class="flex-grow pl-4">
                 <h2 class="font-bold">
-                  Computer Science <a
+                  Computer Science @ <Link
                     href="https://www.itispaleocapa.edu.it"
-                    target="_blank"
-                    rel="noopener noreferrer">@ I.T.I.S. P. Paleocapa</a
+                    external
+                    underline={false}
+                    rel="noopener noreferrer">I.T.I.S. P. Paleocapa</Link
                   >
                 </h2>
                 <p class="mb-2 text-sm">High School | Bergamo, Italy</p>
@@ -263,22 +229,30 @@ import Layout from "@layouts/Layout.astro";
         </section>
 
         <!-- Skills -->
-        <section class="animate space-y-10" id="skills">
+        <section class="animate space-y-6" id="skills">
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Skills 🏋🏻‍♂️
           </h2>
           <div>
-            <div class="mb-4">
+            <div class="mb-5">
               <p>Software development</p>
-              <div class="flex flex-wrap gap-3">
-                <Chips text="Tailwind" />
+              <div class="mt-2 flex flex-wrap gap-3">
                 <Chips text="React" />
+                <Chips text="Tailwind" />
+                <Chips text="NodeJS" />
+                <Chips text="Python" />
+                <Chips text="C/C++" />
+                <Chips text="LLM" />
+                <Chips text="Git" />
+                <Chips text="SQL" />
+                <Chips text="Wordpress" />
+                <Chips text="Shopify" />
               </div>
             </div>
 
             <div>
               <p>Problem solving</p>
-              <div class="flex flex-wrap gap-3">
+              <div class="mt-2 flex flex-wrap gap-3">
                 <Chips text="Client projects" />
                 <Chips text="CTF" />
                 <Chips text="CS competitions" />

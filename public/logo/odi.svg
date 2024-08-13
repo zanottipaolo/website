@@ -1,0 +1,23 @@
+<svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#9E28B5" d="M40 50h10V40H40z"/>
+        <path fill="#B11CAB" d="M40 60h10V50H40z"/>
+        <path fill="#CE009F" d="M40 70h10V60H40z"/>
+        <path fill="#8347AD" d="M40 40h10V30H40z"/>
+        <path fill="#7E57C5" d="M40 30h10V20H40z"/>
+        <path fill="#D41367" d="M30 70h10V60H30z"/>
+        <path fill="#CE009F" d="M20 50h10V40H20z"/>
+        <path fill="#B11CAB" d="M30 50h10V40H30z"/>
+        <path fill="#D41367" d="M20 60h10V50H20z"/>
+        <path fill="#E7004C" d="M20 70h10V60H20z"/>
+        <path fill="#0071CE" d="M60 50h10V40H60z"/>
+        <path fill="#9F92FF" d="M50 10h10V0H50zM60 20h10V10H60z"/>
+        <path fill="#2A7DE1" d="M60 60h10V50H60z"/>
+        <path fill="#14AAD9" d="M60 70h10V60H60z"/>
+        <path fill="#FF4438" d="M10 70h10V60H10z"/>
+        <path fill="#E7004C" d="M0 50h10V40H0z"/>
+        <path fill="#D41367" d="M10 50h10V40H10z"/>
+        <path fill="#FF4438" d="M0 60h10V50H0z"/>
+        <path fill="#FF671D" d="M0 70h10V60H0z"/>
+    </g>
+</svg>
