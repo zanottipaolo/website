@@ -1,9 +1,10 @@
 ---
-title: "Financial report"
-description: "Web app that creates corporate financial report. Developed for Economics and Business Organization exam @ UniBg."
-date: "2023"
-demoURL: "https://financialreport.netlify.app"
-imgURL: "/projects/financial.png"
+title: "Jira Clone"
+description: "Web app for project management that using agile Scrum methodology. Developed for Database 1 and Web exam with two other colleagues."
+date: "2022"
+demoURL: "https://github.com/zanottipaolo/DB1-Agile"
+imgURL: "/projects/jiraclone.jpg"
+stack: "Flask"
 repoURL: ""
 ---
 

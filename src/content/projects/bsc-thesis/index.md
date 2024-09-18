@@ -1,11 +1,9 @@
 ---
-title: "Studio Zanotti"
-description: "I was commissioned by Studio Tecnico Associato Zanotti to
-  create their company website. It's a WordPress project with
-  the purpose of showing their services and works to clients."
-date: "2020"
-demoURL: "https://studiotecnicozanotti.it/"
-imgURL: "/projects/sta-zanotti.jpeg"
+title: "Bs.C Thesis"
+description: "Automatic filtering of clinical text: A Comparative Analysis of structure-based, Ontology-based, and LLM-based Approaches."
+date: "2024"
+imgURL: "/projects/bsc_thesis.webp"
+stack: "AI, Python, Tesseract, PyTorch"
 repoURL: ""
 ---
 

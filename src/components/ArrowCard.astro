@@ -4,7 +4,7 @@ import FormattedDate from "./FormattedDate.astro";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
-  showYear: boolean;
+  showYear?: boolean;
 };
 
 const { entry } = Astro.props as {
