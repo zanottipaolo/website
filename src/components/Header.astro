@@ -6,23 +6,51 @@ import { SITE } from "@consts";
 
 <header transition:persist>
   <Container>
-    <div class="flex flex-wrap justify-between gap-y-2">
-      <Link href="/" underline={false}>
-        <div class="flex items-center gap-4">
-          <img
-            src="/profile.jpeg"
-            class="h-12
-            w-12
-            rounded-full
-            object-cover"
-            alt="It's me!"
-          />
-          <div class="text-xl font-semibold">
-            {SITE.TITLE}
+    <div class="flex flex-col flex-wrap justify-between gap-y-2 sm:flex-row">
+      <div class="flex items-center justify-between">
+        <Link href="/" underline={false}>
+          <div class="flex items-center gap-4">
+            <img
+              src="/profile.jpeg"
+              class="h-12
+                w-12
+                rounded-full
+                object-cover"
+              alt="It's me!"
+            />
+            <div class="text-xl font-semibold">
+              {SITE.TITLE}
+            </div>
           </div>
-        </div>
-      </Link>
-      <nav class="flex flex-wrap items-center gap-4 text-sm">
+        </Link>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          aria-label="Mobile menu button"
+          class="group flex size-9 items-center justify-center rounded hover:bg-black/5 focus-visible:bg-black/5 dark:hover:bg-white/5 dark:focus-visible:bg-white/5 sm:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
+              d="M4 18l16 0"></path></svg
+          >
+        </button>
+      </div>
+
+      <nav
+        id="menu"
+        class="hidden flex-col flex-wrap items-center gap-4 text-sm sm:flex sm:flex-row"
+      >
         <Link href="/about">about</Link>
         <Link href="/projects">projects</Link>
         <Link href="/blog">blog</Link>

@@ -149,6 +149,20 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
         "dark:text-black",
       );
     });
+
+    // Mobile menu
+    const btnMobileMenu = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("menu");
+
+    function toggleMenu() {
+      if (!btnMobileMenu?.classList.contains("hidden")) {
+        console.log("here");
+        menu?.classList.toggle("hidden");
+        menu?.classList.toggle("flex");
+      }
+    }
+
+    btnMobileMenu?.addEventListener("click", toggleMenu);
   }
 
   function updateThemeButtons() {
@@ -297,5 +311,6 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 
   document.addEventListener("DOMContentLoaded", () => init());
   document.addEventListener("astro:after-swap", () => init());
+
   preloadTheme();
 </script>
