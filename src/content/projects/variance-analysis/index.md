@@ -1,10 +1,10 @@
 ---
 title: "Variance Analysis"
-description: "Web application running a Python script for analyzing variances of companies, made with Pandas and Streamlit. Developed for Management Control System exam with 3 other colleagues."
+description: "Web application running a Python script for analyzing variances of companies."
 date: "2022"
 demoURL: "https://scostamenti.streamlit.app"
 imgURL: "/projects/scg.jpg"
-stack: "Python, Pandas, Streamlit"
+stack: "Python • Pandas • Streamlit"
 repoURL: ""
 ---
 

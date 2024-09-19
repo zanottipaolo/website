@@ -1,6 +1,6 @@
 ---
 title: "Jira Clone"
-description: "Web app for project management that using agile Scrum methodology. Developed for Database 1 and Web exam with two other colleagues."
+description: "Web app for project management that using agile Scrum methodology."
 date: "2022"
 demoURL: "https://github.com/zanottipaolo/DB1-Agile"
 imgURL: "/projects/jiraclone.jpg"

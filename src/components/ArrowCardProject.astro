@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import Chips from "./Chips.astro";
 
 type Props = {
   entry: CollectionEntry<"projects">;
@@ -19,14 +20,24 @@ const { entry } = Astro.props as {
   <div class="flex flex-1 flex-col gap-4 sm:flex-row">
     <img
       src={entry.data.imgURL}
-      class="aspect-video w-48 rounded-md object-cover mx-auto"
+      class="mx-auto aspect-video rounded-md object-cover sm:w-48"
     />
     <div>
       <div class="font-semibold">
-        {entry.data.title} • {entry.data.date.getFullYear()}
+        {entry.data.title}
       </div>
       <div class="text-sm">
         {entry.data.description}
+      </div>
+      <!-- <div class="mt-3 text-sm">
+        {entry.data.stack}
+      </div> -->
+      <div class="mt-3 flex flex-wrap gap-2 text-sm">
+        {
+          entry.data.stack?.split("•").map((item) => {
+            return <Chips text={item} size="small" />;
+          })
+        }
       </div>
     </div>
   </div>

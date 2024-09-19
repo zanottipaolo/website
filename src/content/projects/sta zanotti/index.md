@@ -1,8 +1,6 @@
 ---
 title: "Studio Zanotti"
-description: "I was commissioned by Studio Tecnico Associato Zanotti to
-  create their company website. It's a WordPress project with
-  the purpose of showing their services and works to clients."
+description: "Website of Studio Tecnico Associato Zanotti with the purpose of reaching new clients."
 date: "2020"
 demoURL: "https://studiotecnicozanotti.it/"
 imgURL: "/projects/sta-zanotti.jpeg"
