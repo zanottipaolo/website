@@ -20,8 +20,15 @@ export async function getStaticPaths() {
 }
 type Props = CollectionEntry<"blog">;
 
+const post = Astro.props;
+
+const postCategories = post.data.category.split(",");
+
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
+  .filter((post) =>
+    postCategories.some((item) => post.data.category.includes(item)),
+  )
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 function getNextPost() {
@@ -47,7 +54,6 @@ function getPrevPost() {
 const nextPost = getNextPost();
 const prevPost = getPrevPost();
 
-const post = Astro.props;
 const { Content, headings } = await post.render();
 ---
 

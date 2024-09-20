@@ -33,8 +33,6 @@ data.forEach((item) => {
 const uniqueCategories = categories.filter(
   (item, index) => categories.indexOf(item) === index,
 );
-
-const checkedCategories: string[] = [];
 ---
 
 <Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
@@ -78,6 +76,7 @@ const checkedCategories: string[] = [];
                       <input
                         type="checkbox"
                         id={category}
+                        value={category}
                         class="size-5 rounded border-gray-300"
                       />
 
@@ -100,18 +99,12 @@ const checkedCategories: string[] = [];
                   {year}
                 </div>
                 <div>
-                  <ul class="not-prose flex flex-col gap-4">
-                    {posts[year]
-                      .filter((post) =>
-                        checkedCategories.some((item) =>
-                          post.data.category.includes(item),
-                        ),
-                      )
-                      .map((post) => (
-                        <li>
-                          <ArrowCard entry={post} />
-                        </li>
-                      ))}
+                  <ul class="not-prose flex flex-col gap-4" id="posts-section">
+                    {posts[year].map((post) => (
+                      <li data-category={post.data.category}>
+                        <ArrowCard entry={post} />
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </section>
@@ -122,3 +115,56 @@ const checkedCategories: string[] = [];
     </aside>
   </Container>
 </Layout>
+<script is:inline>
+  function handleFilterPosts() {
+    const checkedCategories =
+      localStorage.getItem("checkedCategories")?.split(",") ?? [];
+
+    filterPosts();
+
+    function handleCategoryChange(event) {
+      const category = event.target.value;
+      if (event.target.checked) {
+        // Add category to the list
+        checkedCategories.push(category);
+      } else {
+        // Remove category from the list
+        const index = checkedCategories.indexOf(category);
+        if (index > -1) {
+          checkedCategories.splice(index, 1);
+        }
+      }
+      localStorage.setItem("checkedCategories", checkedCategories);
+      filterPosts();
+    }
+
+    function filterPosts() {
+      const posts = document.querySelectorAll("#posts-section li");
+      posts.forEach((post) => {
+        const postCategories = post.getAttribute("data-category").split(",");
+        // Show the post if it matches any of the selected categories or if no category is selected
+        if (
+          checkedCategories.length === 0 ||
+          postCategories.some((category) =>
+            checkedCategories.includes(category),
+          )
+        ) {
+          post.style.display = "";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    }
+
+    // Attach the event listener to all checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", handleCategoryChange);
+
+      if (checkedCategories.includes(checkbox.value)) checkbox.checked = true;
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => handleFilterPosts());
+  document.addEventListener("astro:after-swap", () => handleFilterPosts());
+</script>
