@@ -91,7 +91,7 @@ const uniqueCategories = categories.filter(
           </div>
         </details>
 
-        <div class="space-y-4">
+        <div class="space-y-4" id="posts-section">
           {
             years.map((year) => (
               <section class="animate space-y-4">
@@ -99,7 +99,7 @@ const uniqueCategories = categories.filter(
                   {year}
                 </div>
                 <div>
-                  <ul class="not-prose flex flex-col gap-4" id="posts-section">
+                  <ul class="not-prose flex flex-col gap-4">
                     {posts[year].map((post) => (
                       <li data-category={post.data.category}>
                         <ArrowCard entry={post} />
@@ -139,19 +139,32 @@ const uniqueCategories = categories.filter(
     }
 
     function filterPosts() {
-      const posts = document.querySelectorAll("#posts-section li");
-      posts.forEach((post) => {
-        const postCategories = post.getAttribute("data-category").split(",");
-        // Show the post if it matches any of the selected categories or if no category is selected
-        if (
-          checkedCategories.length === 0 ||
-          postCategories.some((category) =>
-            checkedCategories.includes(category),
-          )
-        ) {
-          post.style.display = "";
+      const years = document.querySelectorAll("#posts-section section");
+
+      years.forEach((yearSection) => {
+        const posts = yearSection.querySelectorAll("li");
+        let hasVisiblePost = false;
+
+        posts.forEach((post) => {
+          const postCategories = post.getAttribute("data-category").split(",");
+          if (
+            checkedCategories.length === 0 ||
+            postCategories.some((category) =>
+              checkedCategories.includes(category),
+            )
+          ) {
+            post.style.display = "";
+            hasVisiblePost = true;
+          } else {
+            post.style.display = "none";
+          }
+        });
+
+        // Hide or show the year section based on whether it has visible posts
+        if (hasVisiblePost) {
+          yearSection.style.display = "";
         } else {
-          post.style.display = "none";
+          yearSection.style.display = "none";
         }
       });
     }
