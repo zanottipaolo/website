@@ -29,9 +29,6 @@ const { entry } = Astro.props as {
       <div class="text-sm">
         {entry.data.description}
       </div>
-      <!-- <div class="mt-3 text-sm">
-        {entry.data.stack}
-      </div> -->
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
         {
           entry.data.stack?.split("•").map((item) => {
