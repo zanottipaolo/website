@@ -55,6 +55,9 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <ViewTransitions />
 
 <script is:inline>
+  // for mobile menu
+  let flagListener = false;
+
   function init() {
     preloadTheme();
     onScroll();
@@ -62,6 +65,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
     updateThemeButtons();
     addCopyCodeButtons();
     setGiscusTheme();
+    toggleMenu();
 
     const backToTop = document.getElementById("back-to-top");
     backToTop?.addEventListener("click", (event) => scrollToTop(event));
@@ -149,20 +153,40 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
         "dark:text-black",
       );
     });
+  }
 
-    // Mobile menu
+  function toggleMenu() {
+    if (flagListener) return;
     const btnMobileMenu = document.getElementById("mobile-menu-button");
     const menu = document.getElementById("menu");
 
-    function toggleMenu() {
+    const closeIcon = document.getElementById("close-menu-icon");
+    const openIcon = document.getElementById("open-menu-icon");
+
+    const toggleFunction = () => {
       if (!btnMobileMenu?.classList.contains("hidden")) {
-        console.log("here");
         menu?.classList.toggle("hidden");
         menu?.classList.toggle("flex");
-      }
-    }
 
-    btnMobileMenu?.addEventListener("click", toggleMenu);
+        if (menu?.classList.contains("flex")) {
+          closeIcon?.classList.add("block");
+          closeIcon?.classList.remove("hidden");
+
+          openIcon?.classList.add("hidden");
+          openIcon?.classList.remove("block");
+        } else {
+          closeIcon?.classList.remove("block");
+          closeIcon?.classList.add("hidden");
+
+          openIcon?.classList.remove("hidden");
+          openIcon?.classList.add("block");
+        }
+      }
+    };
+
+    btnMobileMenu?.addEventListener("click", toggleFunction);
+
+    flagListener = true;
   }
 
   function updateThemeButtons() {
@@ -309,8 +333,34 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
     }
   };
 
+  // called on Header.astro
+  const closeMenuOnClick = () => {
+    const btnMobileMenu = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("menu");
+
+    const closeIcon = document.getElementById("close-menu-icon");
+    const openIcon = document.getElementById("open-menu-icon");
+
+    if (!btnMobileMenu?.classList.contains("hidden")) {
+      menu?.classList.add("hidden");
+      menu?.classList.remove("flex");
+
+      closeIcon?.classList.remove("block");
+      closeIcon?.classList.add("hidden");
+
+      openIcon?.classList.remove("hidden");
+      openIcon?.classList.add("block");
+    }
+  };
+
   document.addEventListener("DOMContentLoaded", () => init());
   document.addEventListener("astro:after-swap", () => init());
+
+  // close mobile menu when click outside of it
+  document.addEventListener("click", (event) => {
+    if (!document.getElementById("header").contains(event.target))
+      closeMenuOnClick();
+  });
 
   preloadTheme();
 </script>
