@@ -7,40 +7,11 @@ stack: "AI • Python • Tesseract • PyTorch"
 repoURL: ""
 ---
 
-![Astro Micro](/astro-micro.jpg)
+---
 
-Astro Micro is an accessible theme for Astro. It's a fork of Mark Horn's popular theme Astro Nano. Like Nano, Micro comes with zero frameworks installed.
+## Project description
 
-Micro adds features like [Pagefind](https://pagefind.app) for search, [Giscus](https://giscus.app) for comments, and more. For a full list of changes, see this [blog post](/blog/00-micro-changelog).
+Script Python to do OCR on medical files and then use LLM (LLama) to analyze them and remove useless information, like hospital name. The goal is to have a clean text of the diagnosis of a disease in order
+to help upcoming researchers interpret the text.
 
-Micro still comes with everything great about Nano — full type safety, a sitemap, an RSS feed, and Markdown + MDX support. Styled with TailwindCSS and preconfigured with system, light, and dark themes.
-
-Visit [Astro Micro on Github](https://github.com/trevortylerlee/astro-micro) to get started.
-
-## 🚀 Deploy your own
-
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/trevortylerlee/astro-micro">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/trevortylerlee/astro-micro">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
-
-## 📋 Features
-
-Everything in [Astro Nano](https://github.com/markhorn-dev/astro-nano) plus:
-
-- Pagefind search
-- Giscus comments
-- Callout component
-- Table of contents component
-- Pagination component
-- 404 page
-
-and [more](/blog/00-micro-changelog).
-
-## 💯 Lighthouse score
-
-![Astro Nano Lighthouse Score](/astro-nano-lighthouse.jpg)
+At the moment I've finished practice activity and the work is over but I'm writing the thesis right now. I'll add more material and extend the description later.
