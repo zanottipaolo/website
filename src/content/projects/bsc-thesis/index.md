@@ -2,7 +2,7 @@
 title: "Bs.C Thesis"
 description: "Automatic filtering of clinical text: a comparative analysis of structure-based, ontology-based, and LLM-based approaches."
 date: "2024"
-imgURL: "/projects/bsc_thesis.webp"
+imgURL: "/projects/bsc_thesis.jpg"
 stack: "AI • Python • Tesseract • PyTorch"
 repoURL: ""
 ---

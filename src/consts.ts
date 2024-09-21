@@ -6,17 +6,19 @@ export const SITE: Site = {
     "Hello World! My name is Paolo Zanotti and I'm a Software Engineer. This is my portfolio, check out my projects and if you are interested get in touch with me.",
   EMAIL: "hello@paolozanotti.dev",
   NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_PROJECTS_ON_HOMEPAGE: 2,
+  NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
+  DESCRIPTION:
+    "Hello World! My name is Paolo Zanotti and I'm a Software Engineer. This is my portfolio, check out my projects and if you are interested get in touch with me.",
 };
 
 export const ABOUT: Metadata = {
   TITLE: "About",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
+  DESCRIPTION:
+    "A quick summary of my work and school experiences, as well as my core skills.",
 };
 
 export const BLOG: Metadata = {

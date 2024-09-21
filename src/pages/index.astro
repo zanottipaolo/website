@@ -25,12 +25,12 @@ const projects: CollectionEntry<"projects">[] = (
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
-      <h1 class="animate text-2xl font-semibold text-black dark:text-white">
+      <div class="animate text-2xl font-semibold text-black dark:text-white">
         <span class="flex gap-3">
-          Hi there, I'm Paolo Zanotti
+          <h1>Hi there, I'm Paolo Zanotti</h1>
           <img src="/Hi_long.gif" class="h-7 w-7" alt="hand animation" />
         </span>
-      </h1>
+      </div>
       <div class="space-y-16">
         <!-- hero -->
         <section>
@@ -72,7 +72,7 @@ const projects: CollectionEntry<"projects">[] = (
           </ul>
         </section>
 
-        <!-- Services -->
+        <!-- services -->
         <section class="animate space-y-6" id="services">
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Services offered 🎯
@@ -123,7 +123,7 @@ const projects: CollectionEntry<"projects">[] = (
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Testimonials ⭐️
           </h2>
-          <div class="ml-3">
+          <div>
             <div id="testimonial-1">
               <Testimonial
                 description={`Paolo è una persona responsabile, capace e corretta. Come
@@ -134,7 +134,7 @@ const projects: CollectionEntry<"projects">[] = (
                 (html/css/js) sia su progetti custom che su siti Wordpress o
                 Shopify. In particolare è stato in grado di sviluppare anche con
                 librerie come jQuery, Bootstrap, Angular e di utilizzare i tool
-                tipici per lo sviluppo in team (Git, Trello, Jira).`}
+                tipici per lo sviluppo in team (Git, Trello, Jira)."`}
                 name="Claudio Suardi"
                 job="CTO - Officine Digitali Italiane"
                 link="https://www.linkedin.com/in/suardi"
@@ -152,7 +152,7 @@ const projects: CollectionEntry<"projects">[] = (
                     esattamente quello che volevo. Inoltre, il progetto aveva
                     qualche richiesta un po' particolare ma Paolo ha dimostrato
                     ottime capacità di problem solving ed è riuscito a propormi
-                    più soluzioni. Ti ringrazio!
+                    più soluzioni. Ti ringrazio!"
                   `}
                 name="Camilla Mazzoleni"
                 job="Client"
