@@ -8,6 +8,7 @@ import BackToPrevious from "@components/BackToPrevious.astro";
 import PostNavigation from "@components/PostNavigation.astro";
 import TableOfContents from "@components/TableOfContents.astro";
 import Giscus from "@components/Giscus.astro";
+import BlogJSONLD from "@components/BlogJSONLD.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog"))
@@ -57,7 +58,11 @@ const prevPost = getPrevPost();
 const { Content, headings } = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+>
   <Container>
     <div class="animate">
       <BackToPrevious href="/blog">Back to blog</BackToPrevious>

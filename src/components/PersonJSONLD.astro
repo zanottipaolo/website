@@ -1,0 +1,18 @@
+---
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  name: "Paolo Zanotti",
+  url: "https://paolozanotti.dev",
+  image: "https://paolozanotti.dev/og-image.jpeg",
+  sameAs: "https://paolozanotti.dev",
+  jobTitle: "Software Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Freelance",
+  },
+};
+---
+
+<!-- JSONLD schema -->
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

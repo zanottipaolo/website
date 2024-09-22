@@ -5,19 +5,34 @@ import Footer from "@components/Footer.astro";
 import PageFind from "@components/PageFind.astro";
 import { SITE } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
+import BlogJSONLD from "@components/BlogJSONLD.astro";
+import PersonJSONLD from "@components/PersonJSONLD.astro";
 
 type Props = {
   title: string;
   description: string;
+  image?: string;
+  date?: Date;
 };
 
-const { title, description } = Astro.props;
+const { title, description, image, date } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <Head title={`${title} | ${SITE.TITLE}`} description={description} />
+    <Head
+      title={`${title} | ${SITE.TITLE}`}
+      description={description}
+      image={image}
+    />
+    {
+      date ? (
+        <BlogJSONLD title={title} description={description} date={date} />
+      ) : (
+        <PersonJSONLD />
+      )
+    }
   </head>
   <body>
     <Header />

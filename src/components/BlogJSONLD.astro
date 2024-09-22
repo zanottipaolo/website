@@ -1,0 +1,26 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  date: Date;
+};
+
+const { title, description, date } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description: description,
+  author: {
+    "@type": "Person",
+    name: "Paolo Zanotti",
+    url: "https://paolozanotti.dev",
+  },
+  /* the schema expects Date or DateTime using ISO 8601 format. For Date that is yyyy-MM-dd */
+  datePublished: date.toISOString().substring(0, 10),
+};
+---
+
+<!-- JSONLD schema -->
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
