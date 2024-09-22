@@ -1,0 +1,12 @@
+User-agent: Googlebot-Image
+Disallow: /logo/*.jpg
+Disallow: /logo/*.png
+Disallow: /logo/*.jpeg
+Disallow: /logo/*.svg
+Disallow: /projects/*.jpg
+Disallow: /projects/*.png
+Disallow: /projects/*.jpeg
+Disallow: /projects/*.svg
+Disallow: /*.png
+Disallow: /*.jpeg
+Disallow: /*.gif
