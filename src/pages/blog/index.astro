@@ -92,7 +92,7 @@ const uniqueCategories = ["books", "film", "life", "music", "tech", "travel"];
     </aside>
   </Container>
 </Layout>
-<script is:inline>
+<script is:inline data-astro-rerun>
   function handleFilterPosts() {
     const checkedCategories =
       localStorage.getItem("checkedCategories")?.split(",") ?? [];
@@ -159,6 +159,5 @@ const uniqueCategories = ["books", "film", "life", "music", "tech", "travel"];
     });
   }
 
-  document.addEventListener("DOMContentLoaded", handleFilterPosts);
-  document.addEventListener("astro:after-swap", handleFilterPosts);
+  document.addEventListener("astro:page-load", () => handleFilterPosts());
 </script>
