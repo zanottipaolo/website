@@ -76,10 +76,21 @@ const { Content, headings } = await post.render();
         {post.data.title}
       </h1>
     </div>
-    {headings.length > 0 && <TableOfContents headings={headings} />}
+    {
+      headings.length > 0 && post.data.showTableOfContents && (
+        <TableOfContents headings={headings} />
+      )
+    }
     <article class="animate">
       <Content />
-      <div class="mt-24">
+      <div class="flex gap-2">
+        {
+          post.data.category.split(",").map((item) => {
+            return <div>#{item}</div>;
+          })
+        }
+      </div>
+      <div class="mt-4">
         <PostNavigation prevPost={prevPost} nextPost={nextPost} />
       </div>
       <div class="mt-24">

@@ -11,7 +11,6 @@ repoURL: ""
 
 ## Project description
 
-Script Python to do OCR on medical files and then use LLM (LLama) to analyze them and remove useless information, like hospital name. The goal is to have a clean text of the diagnosis of a disease in order
-to help upcoming researchers interpret the text.
+I developed a Python script to do OCR on medical files and then use LLM (LLama) to analyze them and remove useless information, like hospital name. The goal is to have a clean text of the diagnosis of a disease in order to help upcoming researchers interpret the text.
 
 At the moment I've finished practice activity and the work is over but I'm writing the thesis right now. I'll add more material and extend the description later.
