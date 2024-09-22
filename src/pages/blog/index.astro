@@ -159,6 +159,6 @@ const uniqueCategories = ["books", "film", "life", "music", "tech", "travel"];
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => handleFilterPosts());
-  document.addEventListener("astro:after-swap", () => handleFilterPosts());
+  document.addEventListener("DOMContentLoaded", handleFilterPosts);
+  document.addEventListener("astro:after-swap", handleFilterPosts);
 </script>

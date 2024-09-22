@@ -232,7 +232,13 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
   }
 
   function onScroll() {
-    if (window.scrollY > 0) {
+    if (
+      window.scrollY > 0 &&
+      document.documentElement.scrollHeight -
+        window.innerHeight -
+        window.scrollY >
+        45
+    ) {
       document.documentElement.classList.add("scrolled");
     } else {
       document.documentElement.classList.remove("scrolled");
