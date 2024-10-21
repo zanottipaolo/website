@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import Profile from "../assets/profile.jpeg"
 
 const linkProps = {
   onClick: `closeMenuOnClick()`,
@@ -15,7 +16,7 @@ const linkProps = {
         <Link href="/" underline={false} {...linkProps}>
           <div class="flex items-center gap-4">
             <img
-              src="/profile.jpeg"
+              src={Profile.src}
               class="h-12
                 w-12
                 rounded-full

@@ -8,6 +8,7 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import ArrowCardProject from "@components/ArrowCardProject.astro";
 import Testimonial from "@components/Testimonial.astro";
+import HiGif from "../assets/Hi_long.gif";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -28,7 +29,7 @@ const projects: CollectionEntry<"projects">[] = (
       <div class="animate text-2xl font-semibold text-black dark:text-white">
         <span class="flex gap-3">
           <h1>Hi there, I'm Paolo Zanotti</h1>
-          <img src="/Hi_long.gif" class="h-7 w-7" alt="hand animation" />
+          <img src={HiGif.src} class="h-7 w-7" alt="hand animation" />
         </span>
       </div>
       <div class="space-y-16">
