@@ -7,6 +7,5 @@ Disallow: /projects/*.jpg
 Disallow: /projects/*.png
 Disallow: /projects/*.jpeg
 Disallow: /projects/*.svg
-Disallow: /*.png
 Disallow: /*.jpeg
 Disallow: /*.gif
