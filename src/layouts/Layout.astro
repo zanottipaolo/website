@@ -39,7 +39,7 @@ const { title, description, image, date } = Astro.props;
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer client:load />
     <PageFind />
     <div class="fixed bottom-5 right-5">
       <BackToTop />
