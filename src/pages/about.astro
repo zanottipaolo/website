@@ -5,6 +5,7 @@ import { ABOUT } from "@consts";
 import Layout from "@layouts/Layout.astro";
 import Link from "@components/Link.astro";
 import LogoEsperia from "../assets/loghi/esperia.png";
+import LogoGeneration from "../assets/loghi/generation.png";
 import LogoJAC from "../assets/loghi/jac.png";
 import LogoODI from "../assets/loghi/odi.svg";
 import LogoRB from "../assets/loghi/rb.svg";
@@ -53,6 +54,41 @@ import LogoUnibg from "../assets/loghi/unibg.png";
                   <li>IT consulting and Startup Technology Advisor</li>
                   <li>Computer Science teacher</li>
                   <li>Software maintenance</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Generation -->
+            <div class="relative flex pb-12">
+              <div
+                class="absolute inset-0 flex h-full w-14 items-center justify-center"
+              >
+                <div class="pointer-events-none h-full w-1 bg-neutral-200">
+                </div>
+              </div>
+              <div
+                class="relative z-10 inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100"
+              >
+                <img
+                  src={LogoGeneration.src}
+                  class="h-12 w-12 rounded-full object-contain object-center p-1"
+                />
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-bold">
+                  Computer Science Teacher @ <Link
+                    href="https://italy.generation.org/"
+                    external
+                    underline={false}
+                  >
+                    Generation</Link
+                  >
+                </h2>
+                <p class="mb-2 text-sm">
+                  September 2024 ÷ May 2025 | Remote
+                </p>
+                <ul class="list-disc pl-4">
+                  <li>Teaching software development using Python</li>
                 </ul>
               </div>
             </div>
