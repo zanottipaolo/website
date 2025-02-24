@@ -9,6 +9,7 @@ import type { CollectionEntry } from "astro:content";
 import ArrowCardProject from "@components/ArrowCardProject.astro";
 import Testimonial from "@components/Testimonial.astro";
 import HiGif from "../assets/Hi_long.gif";
+import Slider from "@components/Slider.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -38,8 +39,8 @@ const projects: CollectionEntry<"projects">[] = (
           <article class="space-y-4">
             <span class="animate">
               <p>
-                My name is Paolo and I'm a computer engineering student and a
-                software engineer from Bergamo, Italy. 🇮🇹
+                My name is Paolo and I'm a software engineer from Bergamo,
+                Italy. 🇮🇹
                 <br />I like to write code, play CTF challenges and read books.
                 I'm very into computer science, renewable energy and biomedical
                 engineering (and generally the whole engineering world). I'm
@@ -124,8 +125,9 @@ const projects: CollectionEntry<"projects">[] = (
           <h2 class="text-xl font-semibold text-black dark:text-white">
             Testimonials ⭐️
           </h2>
-          <div>
-            <div id="testimonial-1">
+
+          <Slider qta="2">
+            <div class="element-1">
               <Testimonial
                 description={`Paolo è una persona responsabile, capace e corretta. Come
                 sviluppatore lavora bene in team e ha ottime doti di problem
@@ -142,7 +144,7 @@ const projects: CollectionEntry<"projects">[] = (
               />
             </div>
 
-            <div id="testimonial-2" class="hidden">
+            <div class="element-2 hidden">
               <Testimonial
                 description={`
                     Ho chiesto a Paolo di sviluppare una pagina web per un mio
@@ -160,18 +162,7 @@ const projects: CollectionEntry<"projects">[] = (
                 link="https://www.linkedin.com/in/camilla-mazzoleni-3126851b6"
               />
             </div>
-
-            <div class="mt-4 flex justify-center gap-4">
-              <button
-                id="btn-1"
-                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 bg-neutral-900 text-xs text-black/35 transition-colors duration-300 hover:bg-neutral-900 dark:border-white dark:bg-white dark:text-black dark:hover:bg-white"
-              ></button>
-              <button
-                id="btn-2"
-                class="flex h-3 w-3 items-center justify-center rounded-full border border-black/35 text-xs text-black/35 transition-colors duration-300 hover:bg-neutral-900 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
-              ></button>
-            </div>
-          </div>
+          </Slider>
         </section>
 
         <!-- posts -->

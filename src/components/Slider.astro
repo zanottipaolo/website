@@ -1,0 +1,16 @@
+---
+const childrenCount = Astro.props.qta ?? 0;
+---
+
+<div class="slider">
+  <slot />
+  <div class="mt-4 flex justify-center gap-4">
+    {
+      Array.from({ length: childrenCount }).map((_, index) => (
+        <button
+          class={`btn-${index + 1} ${index === 0 ? "flex h-3 w-3 items-center justify-center rounded-full border border-black/35 bg-neutral-900 text-xs text-black/35 transition-colors duration-300 hover:bg-neutral-900 dark:border-white dark:bg-white dark:text-black dark:hover:bg-white" : "flex h-3 w-3 items-center justify-center rounded-full border border-black/35 text-xs text-black/35 transition-colors duration-300 hover:bg-neutral-900 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"}`}
+        />
+      ))
+    }
+  </div>
+</div>

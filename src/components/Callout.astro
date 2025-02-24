@@ -1,6 +1,6 @@
 ---
 interface Component {
-  type: "default" | "info" | "warning" | "error";
+  type: "default" | "info" | "warning" | "error" | "map";
 }
 
 const { type = "default" } = Astro.props;
@@ -13,6 +13,8 @@ if (type === "info") {
   emoji = "⚠️";
 } else if (type === "error") {
   emoji = "🚨";
+} else if (type === "map") {
+  emoji = "📍";
 }
 ---
 
@@ -40,5 +42,9 @@ if (type === "info") {
 
   .callout-error {
     @apply border-red-800 bg-red-100 text-red-950 dark:border-red-200/20 dark:bg-red-950/20 dark:text-red-200;
+  }
+
+  .callout-map {
+    @apply border-green-800 bg-green-100 text-green-950 dark:border-green-200/20 dark:bg-green-950/20 dark:text-green-200;
   }
 </style>
