@@ -1,27 +1,27 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import { SITE, HOME } from "@consts";
-import ArrowCard from "@components/ArrowCard.astro";
-import Link from "@components/Link.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import ArrowCardProject from "@components/ArrowCardProject.astro";
-import Testimonial from "@components/Testimonial.astro";
-import HiGif from "../assets/Hi_long.gif";
-import Slider from "@components/Slider.astro";
+import Layout from "@layouts/Layout.astro"
+import Container from "@components/Container.astro"
+import { SITE, HOME } from "@consts"
+import ArrowCard from "@components/ArrowCard.astro"
+import Link from "@components/Link.astro"
+import { getCollection } from "astro:content"
+import type { CollectionEntry } from "astro:content"
+import ArrowCardProject from "@components/ArrowCardProject.astro"
+import Testimonial from "@components/Testimonial.astro"
+import HiGif from "../assets/Hi_long.gif"
+import Slider from "@components/Slider.astro"
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
 
 const projects: CollectionEntry<"projects">[] = (
   await getCollection("projects")
 )
   // .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE)
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -39,7 +39,7 @@ const projects: CollectionEntry<"projects">[] = (
           <article class="space-y-4">
             <span class="animate">
               <p>
-                My name is Paolo and I'm a software engineer from Italy, now
+                I'm a software engineer from Bergamo, now
                 based in Rome. 🇮🇹
                 <br />I like to write code, play CTF challenges and read books.
                 I'm very into computer science, renewable energy and biomedical

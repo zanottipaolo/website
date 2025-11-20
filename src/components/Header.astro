@@ -1,12 +1,12 @@
 ---
-import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
-import { SITE } from "@consts";
-import Profile from "../assets/profile.jpeg";
+import Container from "@components/Container.astro"
+import Link from "@components/Link.astro"
+import { SITE } from "@consts"
+import Profile from "../assets/profile.jpeg"
 
 const linkProps = {
   onClick: `closeMenuOnClick()`,
-};
+}
 ---
 
 <header transition:persist id="header">
@@ -20,7 +20,7 @@ const linkProps = {
               class="h-12
                 w-12
                 rounded-full
-                object-cover"
+                object-cover object-left"
               alt="Profile picture"
             />
             <div class="text-xl font-semibold">
